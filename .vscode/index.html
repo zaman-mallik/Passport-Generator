@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Passport Generator</h1>
+        <form id="passportForm">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+
+            <label for="passportNumber">Passport Number:</label>
+            <input type="text" id="passportNumber" required>
+
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" accept="image/*" required>
+
+            <button type="submit">Generate Passport</button>
+        </form>
+
+        <div id="passport" class="passport hidden">
+            <h2>Passport</h2>
+            <div class="passport-photo">
+                <img id="passportPhoto" alt="Passport Photo">
+            </div>
+            <div class="passport-details">
+                <p><strong>Full Name:</strong> <span id="displayName"></span></p>
+                <p><strong>Date of Birth:</strong> <span id="displayDob"></span></p>
+                <p><strong>Passport Number:</strong> <span id="displayPassportNumber"></span></p>
+                <p><strong>Nationality:</strong> <span id="displayNationality"></span></p>
+                <p><strong>Gender:</strong> <span id="displayGender"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
